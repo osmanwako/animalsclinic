@@ -1,4 +1,4 @@
-# Vet clinic Database
+# Animals clinic Database
 
 # 📗 Table of Contents
 
@@ -46,7 +46,7 @@
 
 ## Key Features
 
-- **vet_clinic Database**
+- **animalsclinic Database**
 - **animals tables**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -72,7 +72,7 @@ Clone this repository to your desired folder:
 ```sh
 
 cd my-dir
-git clone https://github.com/osmanwako/vetanimalclinic.git
+git clone https://github.com/osmanwako/animalsclinic.git
 
 ```
 
@@ -80,7 +80,7 @@ git clone https://github.com/osmanwako/vetanimalclinic.git
 
 ### Install
 
-1. Clone the repo:https://github.com/osmanwako/vetanimalclinic.git
+1. Clone the repo:https://github.com/osmanwako/animalsclinic.git
 
 2. Install PostgreSQL Database
 
