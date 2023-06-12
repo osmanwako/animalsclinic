@@ -116,10 +116,6 @@ N/A
 - **[Add database schema diagram]**
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🚀 Project Demo <br>
-
-N/A
-
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
@@ -140,4 +136,4 @@ we would like to express our gratitude to Microverse community for this project.
 
 ## 📝 License <a name="license"></a>
 
-N/A
+This project is [MIT](MIT.md) licensed.
