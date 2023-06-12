@@ -20,9 +20,9 @@
 - [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
-# 📖 React-currency <a name="react-currency"></a>
+# 📖 Animals Clinic <a name="animalsclinic"></a>
 
-## Redux toolkit,React and API Setup
+## PostgreSQL Database SQL
 
 **Vet Animal Clinic** This project is database query design for vertinary clinic with table name animals.
 
