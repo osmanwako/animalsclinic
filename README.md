@@ -114,9 +114,10 @@ N/A
 - **[Add "join table" for visits]**
 - **[Database performance audit]**
 - **[Add database schema diagram]**
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## 🚀 Project Demo <br>
+
 N/A
 
 ## 🤝 Contributing <a name="contributing"></a>
