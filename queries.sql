@@ -1,6 +1,6 @@
 /*Queries that provide answers to the questions from all projects.*/
 /*
- 0. Find all animals whose name ends in "mon".
+ 1. Find all animals whose name ends in "mon".
  */
 SELECT
   *
@@ -11,7 +11,7 @@ WHERE
 
 
 /*
- 1. List the name of all animals born between 2016 and 2019.
+ 2. List the name of all animals born between 2016 and 2019.
  */
 SELECT
   name
@@ -22,7 +22,7 @@ WHERE
 
 
 /*
- 2. List the name of all animals that are neutered and
+ 3. List the name of all animals that are neutered and
  have less than 3 escape attempts.
  */
 SELECT
@@ -35,7 +35,7 @@ WHERE
 
 
 /*
- 3. List the date of birth of all animals named either "Agumon" or "Pikachu".
+ 4. List the date of birth of all animals named either "Agumon" or "Pikachu".
  */
 SELECT
   date_of_birth
@@ -47,7 +47,7 @@ WHERE
 
 
 /*
- 4. List name and escape attempts of animals that weigh more than 10.5kg
+ 5. List name and escape attempts of animals that weigh more than 10.5kg
  */
 SELECT
   name,
@@ -59,7 +59,7 @@ WHERE
 
 
 /*
- 5. Find all animals that are neutered.*/
+ 6. Find all animals that are neutered.*/
 SELECT
   *
 FROM
@@ -69,7 +69,7 @@ WHERE
 
 
 /*
- 6. Find all animals not named Gabumon.
+ 7. Find all animals not named Gabumon.
  */
 SELECT
   *
@@ -80,7 +80,7 @@ WHERE
 
 
 /*
- 7.  Find all animals with a weight between 10.4kg and 17.3kg (including the animals with the
+ 8.  Find all animals with a weight between 10.4kg and 17.3kg (including the animals with the
  weights that equals precisely 10.4kg or 17.3kg)
  */
 SELECT
