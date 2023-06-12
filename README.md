@@ -71,7 +71,7 @@ Clone this repository to your desired folder:
 
 ```sh
 
-cd my-dir
+cd your-folder
 git clone https://github.com/osmanwako/animalsclinic.git
 
 ```
