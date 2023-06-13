@@ -1,55 +1,73 @@
 # Animals clinic Database
 
+## Getting Started
+
+This repository includes files with plain SQL that can be used to recreate a database:
+
+- Use [schema.sql](./schema.sql) to create all tables.
+- Use [data.sqEditing animalsclinic/README.md at vet_clinic· osmanwako/animalsclinic · GitHubl](./data.sql) to populate tables with sample data.
+- Check [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database. **Important note: this file might include queries that make changes in the database (e.g., remove records). Use them responsibly!**
+
+<a name="readme-top"></a>
+
 # 📗 Table of Contents
 
-- [📖 React-currency](#about-project)
+- [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
   - [Run tests](#run-tests)
+  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
+- [❓ FAQ](#faq)
 - [📝 License](#license)
 
-# 📖 Animals Clinic <a name="animalsclinic"></a>
+<!-- PROJECT DESCRIPTION -->
 
-## PostgreSQL Database SQL
+# 📖 animalsclinic <a name="about-project"></a>
 
-**Vet Animal Clinic** This project is database query design for vertinary clinic with table name animals.
+vet_clinic database is a database that includes data about animals and allowing efficient storage and retrieval information.
+
+**animalsclinic** is a database designed by postgresql.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
-  <summary>Client</summary>
-  
-</details>
-
-<details>
   <summary>Server</summary>
-<ul>
-    <li>PostgreSQL</li>
+  <ul>
+    <li>Localhost</a></li>
   </ul>
 </details>
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<details>
+<summary>Database</summary>
+  <ul>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+  </ul>
+</details>
 
-## Key Features
+<!-- Features -->
+
+### Key Features <a name="key-features"></a>
 
 - **animalsclinic Database**
 - **animals tables**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -59,42 +77,35 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
-<ul>
-  <li>PostgreSQL Database</li>
-  <li>SQL Shell (psql)</li>
-  <li>Vs code</li>
-</ul>
+psql running on your local machine
 
 ### Setup
 
 Clone this repository to your desired folder:
 
 ```sh
-
-cd your-folder
-git clone https://github.com/osmanwako/animalsclinic.git
-
+  cd my-folder
+  git clone https://github.com/osmanwako/animalsclinic.git
 ```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Install
 
-1. Clone the repo:https://github.com/osmanwako/animalsclinic.git
+Install this project with:
 
-2. Install PostgreSQL Database
+on your local machine got to your psql shell and use the following file inside repository
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+- schema.sql
+- data.sql
 
 ### Usage
 
-To run tests, run the following command:
+To run the project, execute the following command:
 
-N/A
+Once psql shell is opened you can use the file schema.sql to create a table and database
 
-### Run Tests
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-N/A
+<!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
 
@@ -115,6 +126,8 @@ N/A
 - **[Database performance audit]**
 - **[Add database schema diagram]**
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
 
