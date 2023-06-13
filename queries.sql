@@ -227,3 +227,108 @@ WHERE
 
 
 COMMIT TRANSACTION;
+
+
+/*
+ Aggregate
+ date_of_birth,escape_attempts,neutered,weight_kg
+ Write queries to answer the following questions:
+ A1. How many animals are there? 
+ */
+SELECT
+  COUNT(*) as animal
+FROM
+  animals;
+
+
+/*
+ A2. How many animals have never tried to escape?
+ 
+ */
+SELECT
+  COUNT(*) as not_escape
+FROM
+  animals
+WHERE
+  escape_attempts = 0;
+
+
+/*
+ A3. What is the average weight of animals?
+ */
+SELECT
+  ROUND(AVG(weight_kg), 2) as avg_weight
+FROM
+  animals;
+
+
+/*
+ A4. Who escapes the most, neutered or not neutered animals?
+ */
+SELECT
+  (
+    case
+      when neutered then 'Neutered'
+      else 'Not Neutered'
+    end
+  ) as escapes_most,
+  sum(escape_attempts) as escapes
+FROM
+  animals
+GROUP BY
+  neutered
+ORDER BY
+  escapes DESC
+LIMIT
+  1;
+
+
+/*
+ A5. What is the minimum and maximum weight of each type of animal?
+ */
+SELECT
+  name as name_type,
+  MIN(weight_kg) as min_weight,
+  MAX(weight_kg) as max_weight
+FROM
+  animals
+GROUP BY
+  name_type;
+
+
+SELECT
+  species as species_type,
+  MIN(weight_kg) as min_weight,
+  MAX(weight_kg) as max_weight
+FROM
+  animals
+GROUP BY
+  species_type;
+
+
+SELECT
+  (
+    case
+      when neutered then 'Neutered'
+      else 'Not Neutered'
+    end
+  ) as neutered_type,
+  MIN(weight_kg) as min_weight,
+  MAX(weight_kg) as max_weight
+FROM
+  animals
+GROUP BY
+  neutered_type;
+
+
+/*
+ A6. What is the average number of escape attempts per animal type of 
+ those born between 1990 and 2000?
+ */
+SELECT
+  ROUND(AVG(escape_attempts), 2) as avg_escape_attempts
+FROM
+  animals
+WHERE
+  escape_attempts > 0
+  AND date_of_birth BETWEEN '1990-01-01' AND '2000-12-31';
