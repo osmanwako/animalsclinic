@@ -96,6 +96,7 @@ on your local machine got to your psql shell and use the following file inside r
 
 - schema.sql
 - data.sql
+- queries.sql
 
 ### Usage
 
@@ -109,13 +110,11 @@ Once psql shell is opened you can use the file schema.sql to create a table and 
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Authors**
-
 👤 Osman Wako
 
-- GitHub: [@Osman Wako](https://github.com/osmanwako)
-- Twitter: [@Osman Wako](https://twitter.com/osmanwakow)
-- LinkedIn :[LinkedIn](https://www.linkedin.com/in/osmanwako/)
+- GitHub: [@osmanwako](https://github.com/osmanwako)
+- Twitter: [@osmanWakow](https://twitter.com/osmanwakow)
+- LinkedIn :[@osmanWako](https://www.linkedin.com/in/osmanwako/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
