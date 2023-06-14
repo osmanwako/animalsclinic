@@ -332,3 +332,106 @@ FROM
 WHERE
   escape_attempts > 0
   AND date_of_birth BETWEEN '1990-01-01' AND '2000-12-31';
+
+
+/*
+ Write queries (using JOIN) to answer the following questions:
+ J1.What animals belong to Melody Pond?
+ */
+SELECT
+  a.*,
+  o.full_name as owner_name
+FROM
+  animals a
+  JOIN owners o ON a.owner_id = o.id
+WHERE
+  o.full_name = 'Melody Pond';
+
+
+/*
+ J2. List of all animals that are pokemon (their type is Pokemon).
+ */
+SELECT
+  a.*,
+  s.name as type
+FROM
+  animals a
+  JOIN species s ON a.species_id = s.id
+WHERE
+  s.name = 'Pokemon';
+
+
+/*
+ J3. List all owners and their animals, remember to include 
+ those that don't own any animal.
+ */
+SELECT
+  o.*,
+  a.name as animal
+FROM
+  owners o
+  LEFT JOIN animals a ON a.owner_id = o.id;
+
+
+/*
+ J4. How many animals are there per species?
+ */
+SELECT
+  s.name as species_name,
+  COUNT(a.id) as quantity
+FROM
+  species s
+  JOIN animals a ON s.id = a.species_id
+GROUP by
+  species_name;
+
+
+/*
+ J5. List all Digimon owned by Jennifer Orwell.
+ */
+SELECT
+  a.id,
+  a.name as animal_name,
+  s.name as animal_species,
+  o.full_name as owner_name
+FROM
+  animals a
+  JOIN species s ON s.id = a.species_id
+  JOIN owners o ON o.id = a.owner_id
+where
+  s.name = 'Digimon'
+  AND o.full_name = 'Jennifer Orwell';
+
+
+/*
+ J6. List all animals owned by Dean Winchester that haven't tried to escape.
+ */
+SELECT
+  a.id as animal_id,
+  a.name as animal_name,
+  a.escape_attempts,
+  o.full_name as owner_name
+FROM
+  animals a
+  JOIN owners o ON a.owner_id = o.id
+WHERE
+  a.escape_attempts = 0
+  AND o.full_name = 'Sam Smith';
+
+
+/*
+ J7. Who owns the most animals?
+ */
+SELECT
+  o.full_name as owner_name,
+  COUNT(a.id) as total
+FROM
+  animals a
+  JOIN owners o ON a.owner_id = o.id
+GROUP BY
+  a.owner_id,
+  o.full_name
+ORDER BY
+  total DESC
+LIMIT
+  1;
