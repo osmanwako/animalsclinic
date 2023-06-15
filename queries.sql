@@ -416,7 +416,7 @@ FROM
   JOIN owners o ON a.owner_id = o.id
 WHERE
   a.escape_attempts = 0
-  AND o.full_name = 'Sam Smith';
+  AND o.full_name = 'Dean Winchester';
 
 
 /*
