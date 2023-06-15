@@ -64,6 +64,8 @@ vet_clinic database is a database that includes data about animals and allowing 
 
 - **animalsclinic Database**
 - **animals tables**
+- **species tables**
+- **0wners tables**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -120,10 +122,9 @@ Once psql shell is opened you can use the file schema.sql to create a table and 
 
 ## Future Features
 
-- **[Add Related an other table]**
-- **[Add "join table" for visits]**
 - **[Database performance audit]**
 - **[Add database schema diagram]**
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->

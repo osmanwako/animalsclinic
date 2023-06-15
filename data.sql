@@ -59,3 +59,179 @@ VALUES
   ('Boarmon', '2005-06-07', 7, true, 20.4),
   ('Blossom', '1998-10-13', 3, true, 17),
   ('Ditto', '2022-05-14', 4, true, 22);
+
+
+/*
+ Insert the following data into the owners table:
+ Sam Smith 34 years old.
+ Jennifer Orwell 19 years old.
+ Bob 45 years old.
+ Melody Pond 77 years old.
+ Dean Winchester 14 years old.
+ Jodie Whittaker 38 years old.
+ */
+INSERT INTO
+  owners (full_name, age)
+VALUES
+  ('Sam Smith', 34),
+  ('Jennifer Orwell', 19),
+  ('Bob', 45),
+  ('Melody Pond', 77),
+  ('Dean Winchester', 14),
+  ('Jodie Whittaker', 38);
+
+
+/*
+ Insert the following data into the species table:
+ Pokemon
+ Digimon
+ */
+INSERT INTO
+  species (name)
+VALUES
+  ('Pokemon'),
+  ('Digimon');
+
+
+/*
+ Modify your inserted animals so it includes the species_id value:
+ M1. If the name ends in "mon" it will be Digimon
+ */
+UPDATE
+  animals
+SET
+  species_id = (
+    SELECT
+      id
+    FROM
+      species
+    WHERE
+      name = 'Digimon'
+    LIMIT
+      1
+  )
+where
+  name LIKE '%mon';
+
+
+/*
+ Modify your inserted animals so it includes the species_id value:
+ M2. All other animals are Pokemon.
+ */
+UPDATE
+  animals
+SET
+  species_id = (
+    SELECT
+      id
+    FROM
+      species
+    WHERE
+      name = 'Pokemon'
+    LIMIT
+      1
+  )
+where
+  name NOT LIKE '%mon';
+
+
+/*
+ Modify your inserted animals to include owner information (owner_id):
+ M3. Sam Smith owns Agumon.
+ */
+UPDATE
+  animals
+SET
+  owner_id = (
+    SELECT
+      id
+    FROM
+      owners
+    WHERE
+      full_name = 'Sam Smith'
+    LIMIT
+      1
+  )
+where
+  name = 'Agumon';
+
+
+/*
+ M4. Jennifer Orwell owns Gabumon and Pikachu.
+ */
+UPDATE
+  animals
+SET
+  owner_id = (
+    SELECT
+      id
+    FROM
+      owners
+    WHERE
+      full_name = 'Jennifer Orwell'
+    LIMIT
+      1
+  )
+where
+  name IN ('Gabumon', 'Pikachu');
+
+
+/*
+ M5. Bob owns Devimon and Plantmon.
+ */
+UPDATE
+  animals
+SET
+  owner_id = (
+    SELECT
+      id
+    FROM
+      owners
+    WHERE
+      full_name = 'Bob'
+    LIMIT
+      1
+  )
+where
+  name = 'Devimon'
+  OR name = 'Plantmon';
+
+
+/*
+ M6. Melody Pond owns Charmander, Squirtle, and Blossom.
+ */
+UPDATE
+  animals
+SET
+  owner_id = (
+    SELECT
+      id
+    FROM
+      owners
+    WHERE
+      full_name = 'Melody Pond'
+    LIMIT
+      1
+  )
+where
+  name IN ('Charmander', 'Squirtle', 'Blossom');
+
+
+/*
+ M7. Dean Winchester owns Angemon and Boarmon.
+ */
+UPDATE
+  animals
+SET
+  owner_id = (
+    SELECT
+      id
+    FROM
+      owners
+    WHERE
+      full_name = 'Dean Winchester'
+    LIMIT
+      1
+  )
+where
+  name IN ('Angemon', 'Boarmon');
