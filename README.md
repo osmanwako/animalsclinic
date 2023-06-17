@@ -66,6 +66,9 @@ vet_clinic database is a database that includes data about animals and allowing 
 - **animals tables**
 - **species tables**
 - **0wners tables**
+- **Vets tables**
+- **Visits tables**
+- **Specialization tables**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
